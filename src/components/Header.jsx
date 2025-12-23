@@ -88,9 +88,15 @@ const Header = () => {
         >
           {/* Avatar */}
           <div className="flex items-center gap-2">
-            <span className="text-white font-medium hidden sm:inline-block mr-5">
-              {userName.charAt(0).toUpperCase() + userName.slice(1)}
+            <span className="text-white font-medium mr-2">
+              <span className="sm:hidden">
+                {userName.charAt(0).toUpperCase() + userName.slice(1)}
+              </span>
+              <span className="hidden sm:inline-block">
+                {userName.charAt(0).toUpperCase() + userName.slice(1)}
+              </span>
             </span>
+
             <div
               onClick={() => setShowDropdown(!showDropdown)}
               className="w-8 h-8 rounded-full overflow-hidden cursor-pointer hover:ring-2 ring-white transition"
